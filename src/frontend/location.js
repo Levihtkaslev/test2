@@ -31,6 +31,10 @@ const Qlocation = () => {
      // ***********************************Create Location*************************************
 
     const createlocation = async () => {
+        if(!locationname === null){
+            toast.error("Please Fill all fields");
+            return;
+        }
         await fetch(`${backendbaseurl}/locations`, {
             method : "POST",
             headers : {
@@ -92,7 +96,7 @@ const Qlocation = () => {
                     <div className='flex flex-col gap-2'>
                         <h2 class=" font-semibold text-3xl text-white">Location Page</h2> 
                         <div className="flex items-center space-x-2 ">
-                            <a href="/location" className="text-slate-200 hover:text-white flex items-center">
+                            <a href="/" className="text-slate-200 hover:text-white flex items-center">
                                 <HiHome className="mr-1" />
                                 Home
                             </a>
@@ -149,7 +153,7 @@ const Qlocation = () => {
 
             {/*  ************************************Creating and editing********************************** */}
 
-            <div class=" bg-cyan-100  items-end rounded-lg p-10 gap-6 shadow-lg shadow-teal-200 border hover:bg-cyan-200 transition-all ease-in-out">
+            <div class=" bg-white  items-end rounded-lg p-10 gap-6 shadow-lg  border hover:bg-white transition-all ease-in-out">
                 <div className='flex gap-6 items-end'>
                     <button onClick={creationconfirm}  class="addnew" >Add Location
                     <svg width="23px" height="23px" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">

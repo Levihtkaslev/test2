@@ -201,7 +201,7 @@ const Report = () => {
                     <div className='flex flex-col gap-2' >
                     <h2 class=" font-semibold text-3xl text-white">Report Page</h2> 
                     <div className="flex items-center space-x-2">
-                            <a href="/report" className="text-slate-200 hover:text-white flex items-center">
+                            <a href="/" className="text-slate-200 hover:text-white flex items-center">
                                 <HiHome className="mr-1" />
                                 Home
                             </a>
@@ -227,7 +227,7 @@ const Report = () => {
             
             </div>
 
-            <div class=" bg-cyan-100  items-end rounded-lg p-10 gap-6 shadow-lg shadow-teal-200 border hover:bg-cyan-200 transition-all ease-in-out">
+            <div class=" bg-white  items-end rounded-lg p-10 gap-6 shadow-lg shadow-white border  transition-all ease-in-out">
 
             <div className="flex">
             <div class="dropdownone">
@@ -323,14 +323,14 @@ const Report = () => {
                     </tbody>
                     <tfoot class= " tablefoot">{!choosedDep && 
                         <tr className="font-bold">
-                        <td className="tc hover:bg-white hover:text-black" colSpan="2">Total</td>
-                        <td className="tc hover:bg-white hover:text-black">{totals.totalsubpen}</td>
-                        <td className="tc hover:bg-white hover:text-black">{totals.totalsubcom}</td>
-                        <td className="tc text-center hover:bg-white hover:text-black">{totals.totalsubpen + totals.totalsubcom}</td>
-                        <td className="tc hover:bg-white hover:text-black">{totals.totalrecpen}</td>
-                        <td className="tc hover:bg-white hover:text-black">{totals.totalreccom}</td>
-                        <td className="tc hover:bg-white hover:text-black text-center">{totals.totalrecpen + totals.totalreccom}</td>
-                        <td className="tc hover:bg-white hover:text-black text-center">
+                        <td className="tc hover:bg-white hover:text-black transition-all duration-300" colSpan="2">Total</td>
+                        <td className="tc hover:bg-white hover:text-black transition-all duration-300">{totals.totalsubpen}</td>
+                        <td className="tc hover:bg-white hover:text-black transition-all duration-300">{totals.totalsubcom}</td>
+                        <td className="tc text-center hover:bg-white hover:text-black transition-all duration-300">{totals.totalsubpen + totals.totalsubcom}</td>
+                        <td className="tc hover:bg-white hover:text-black transition-all duration-300">{totals.totalrecpen}</td>
+                        <td className="tc hover:bg-white hover:text-black transition-all duration-300">{totals.totalreccom}</td>
+                        <td className="tc hover:bg-white hover:text-black text-center transition-all duration-300">{totals.totalrecpen + totals.totalreccom}</td>
+                        <td className="tc hover:bg-white hover:text-black text-center transition-all duration-300">
                             {totals.totalsubpen +
                                 totals.totalsubcom +
                                 totals.totalrecpen +

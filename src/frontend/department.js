@@ -66,6 +66,10 @@ const Qdepartment = () => {
     //***********************************Creating Departments*************************************
 
     const createdepartment = async () => {
+        if(!departmentname || !password || !clickedlocation || !targetname || !targetno || !targetpos === null){
+            toast.error("Please Fill all fields");
+            return;
+        }
         await fetch(`${backendbaseurl}/departments`, {
             method : 'POST',
             headers: {
@@ -223,7 +227,7 @@ const Qdepartment = () => {
                     <div className='flex flex-col gap-2' >
                     <h2 class=" font-semibold text-3xl text-white">Department Page</h2> 
                     <div className="flex items-center space-x-2">
-                            <a href="/department" className="text-slate-200 hover:text-white flex items-center">
+                            <a href="/" className="text-slate-200 hover:text-white flex items-center">
                                 <HiHome className="mr-1" />
                                 Home
                             </a>
@@ -242,7 +246,7 @@ const Qdepartment = () => {
                 </div>
            </div>
 
-           <div class=" bg-cyan-100  items-end rounded-lg p-10 gap-6 shadow-lg shadow-teal-200 border hover:bg-cyan-200 transition-all ease-in-out">
+           <div class=" bg-white  items-end rounded-lg p-10 gap-6 shadow-lg  border hover:bg-white transition-all ease-in-out">
                 
                 <div class="flex flex-col">
                    

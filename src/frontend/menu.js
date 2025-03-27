@@ -65,7 +65,7 @@ function Menu() {
                                 <span className="ml-2">Report Info</span>
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link to="/media" className="text-white hover:text-gray-200 flex items-center">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,7 @@ function Menu() {
                                 </svg>
                                 <span className="ml-2">Log Out</span>
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </div>

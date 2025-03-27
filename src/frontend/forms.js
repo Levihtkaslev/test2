@@ -239,7 +239,7 @@ const viewmore = async (form) => {
           <div className='flex flex-col gap-2'>
           <h2 class=" font-semibold text-3xl text-white">Ticket Forms</h2> 
           <div className="flex items-center space-x-2">
-              <a href="/forms" className="text-slate-200 hover:text-white flex items-center">
+              <a href="/" className="text-slate-200 hover:text-white flex items-center">
                   <HiHome className="mr-1" />
                   Home
               </a>
