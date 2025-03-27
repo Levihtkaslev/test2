@@ -23,9 +23,14 @@ const Qlocation = () => {
     // ***********************************Location Fetching*************************************
 
     const getlocation = async () =>{
-        const response = await fetch(`${backendbaseurl}/locations`);
+        try {
+            const response = await fetch(`${backendbaseurl}/locations`);
         const responseddata = await response.json();
         setlocation(responseddata);
+            
+        } catch (error) {
+            console.log("error",error)
+        }
     };
 
      // ***********************************Create Location*************************************

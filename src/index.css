@@ -71,7 +71,7 @@ body{
 /* Tables */
 
 .tableout{
-  @apply  overflow-hidden  mt-10 rounded-lg border-gray-300  shadow-teal-200 border border-spacing-96 w-full;
+  @apply  overflow-hidden overflow-x-auto  mt-10 rounded-lg border-gray-300  shadow-teal-200 border border-spacing-96 w-full;
 }
 
 .table {

@@ -49,9 +49,13 @@ const Qdepartment = () => {
     //***********************************ListingDepartments*************************************
 
     const getdepartment = async(locationid ='') => {
-        const response = await fetch(locationid ? `${backendbaseurl}/departments?locationid=${locationid}` :`${backendbaseurl}/departments`);
-        const data = await response.json();
-        setdepartment(data);
+        try {
+            const response = await fetch(locationid ? `${backendbaseurl}/departments?locationid=${locationid}` :`${backendbaseurl}/departments`);
+            const data = await response.json();
+            setdepartment(data);
+        } catch (error) {
+            console.log("erorr", error)
+        }
     };
 
     const filterdepart = department.filter((dept) => {
