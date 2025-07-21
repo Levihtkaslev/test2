@@ -641,35 +641,50 @@ const viewmore = async (form) => {
 
       {/* View More Section */}
       {showmore && choosed && (
-        <div className="viewm">
-          <h3>Form Details</h3>
-          <button onClick={closeall}>Close</button>
-          <p>From: {choosed.fromdepartment}</p>
-          <p>To: {choosed.todepartment}</p>
-          <p>Subject: {choosed.subject}</p>
-          <p>Description : {choosed.description}</p>
-          <p>Status: {choosed.status}</p>
-          <p>Clinical: {choosed.clinical}</p>
-          <p>Operational: {choosed.operational}</p>
-          <p>Persons Involved: {choosed.personsinvolved}</p>
-          <p>Date: {choosed.createdtime}</p>
+        <div className="w-1/3 rounded-xl shadow-lg mx-auto mt-5 p-5">
+          <div className="flex justify-between">
+            <h3 className="font-bold">Full Details</h3>
+            <button className="text-red-500" onClick={closeall}>Close</button>
+          </div>
+          
+          <div className="flex justify-between ">
 
+            <div >
+              <h4 className="font-semibold">From Details</h4>
+                <p className=""><strong>From: </strong>{choosed.fromdepartment}</p>
+                <p className=""><strong>To: </strong>{choosed.todepartment}</p>
+                <p className=""><strong>Subject: </strong>{choosed.subject}</p>
+                <p className=""><strong>Description : </strong>{choosed.description}</p>
+                <p className=""><strong>Status: </strong>{choosed.status}</p>
+                <p className=""><strong>Clinical:</strong> {choosed.clinical}</p>
+                <p className=""><strong>Operational: </strong>{choosed.operational}</p>
+                <p className=""><strong>Persons Involved: </strong>{choosed.personsinvolved}</p>
+                <p className=""><strong>Date:</strong> {choosed.createdtime}</p>
 
-        {responseform && (
-            <div>
-                 <h4>Response Details</h4>
-                 <p><strong>Explanation:</strong> {responseform.explanation}</p>
-                 <p>Causes: {responseform.causes}</p>
-                 <p>Prevented? :{responseform.isprevented}</p>
-                 <p>Future preventive measures: {responseform.futurepreaction}</p>
-                 <p>Immediate Action : {responseform.immediate}</p>
-                 <p>Action Type :{responseform.actiontype}</p>
-                 <p>Responsible for implementation : {responseform.resofimple}</p>
-                 <p>CAPA Done by: {responseform.capa}</p>
-                 <p>Responsedn time : {responseform.createdtime}</p>
 
             </div>
-        )}
+
+            <div>
+                {responseform && (
+                    <div >
+                        <h4 className="font-semibold">Response Details</h4>
+                        <p className=""><strong>Explanation:</strong> {responseform.explanation}</p>
+                        <p className=""><strong>Causes:</strong> {responseform.causes}</p>
+                        <p className=""><strong>Prevented? :</strong>{responseform.isprevented}</p>
+                        <p className=""><strong>Future preventive measures: </strong>{responseform.futurepreaction}</p>
+                        <p className=""><strong>Immediate Action : </strong>{responseform.immediate}</p>
+                        <p className=""><strong>Action Type :</strong>{responseform.actiontype}</p>
+                        <p className=""><strong>Responsible for implementation :</strong> {responseform.resofimple}</p>
+                        <p className=""><strong>CAPA Done by: </strong>{responseform.capa}</p>
+                        <p className=""><strong>Responsedn time :</strong> {responseform.createdtime}</p>
+
+                    </div>
+                )}
+            </div>
+          </div>
+         
+
+       
 
 
         </div>
